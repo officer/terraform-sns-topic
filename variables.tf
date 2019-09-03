@@ -15,5 +15,5 @@ variable "tags" {
 variable "debug" {
   description   = "Whether capture success feedback"
   type          = "string"
-  default       = "true"
+  default       = "false"
 }
