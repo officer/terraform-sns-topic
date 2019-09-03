@@ -29,7 +29,7 @@ resource "aws_sns_topic" "topic" {
 }
 
 resource "aws_iam_role" "role" {
-  assume_role_policy = "${data.aws_iam_policy_document.basic_sns_policy.json}"
+  assume_role_policy = "${data.aws_iam_policy_document.assume_role_policy_sns.json}"
   name_prefix        = "${var.namespace}"
 }
 
