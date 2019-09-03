@@ -2,7 +2,6 @@
 data "aws_iam_policy_document" "assume_role_policy_sns" {
   statement {
       actions = ["sts:AssumeRole"]
-      resources = ["*"]
       principals {
           type = "Service"
           identifiers = ["sns.amazonaws.com"]
