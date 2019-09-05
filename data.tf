@@ -10,6 +10,7 @@ data "aws_iam_policy_document" "assume_role_policy_sns" {
   }
 }
 
+# SNS IAM Policy for delivery log
 data "aws_iam_policy_document" "basic_sns_policy" {
   statement {
     actions = [
@@ -28,3 +29,9 @@ data "aws_iam_policy_document" "basic_sns_policy" {
     resources = ["*"]
   }
 }
+
+
+# Region, Account Id
+data "aws_region" "current" {}
+
+data "aws_caller_identity" "self" {}
